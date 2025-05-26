@@ -1,0 +1,249 @@
+ 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Putz Store Payment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://files.catbox.moe/1ap3qd.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 30px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .qris-img {
+      max-width: 250px;
+      border-radius: 15px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      font-size: 24px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+      margin-bottom: 30px;
+    }
+
+    .buttons-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-top: 30px;
+      max-width: 360px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .copy-button {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      border: none;
+      border-radius: 12px;
+      padding: 14px 20px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #000;
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease;
+    }
+
+    .copy-button .text-group {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .copy-button .label {
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 3px;
+    }
+
+    .copy-button .value {
+      font-size: 16px;
+      font-weight: normal;
+    }
+
+    .copy-button:hover {
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    .copy-button.copied {
+      background: rgba(144, 238, 144, 0.9);
+    }
+
+    .copy-icon {
+      width: 24px;
+      height: 24px;
+      fill: #000;
+      flex-shrink: 0;
+      margin-left: 10px;
+    }
+
+    /* Upload form */
+    #uploadSection {
+      margin-top: 50px;
+      background: rgba(255, 255, 255, 0.3);
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    #uploadSection h2 {
+      margin-bottom: 15px;
+      color: #000;
+      text-shadow: none;
+    }
+
+    #uploadForm {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+
+    #buktiTransfer {
+      width: 100%;
+      padding: 6px;
+    }
+
+    #uploadForm button {
+      background: #4caf50;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      width: 100%;
+      max-width: 200px;
+      transition: background 0.3s ease;
+    }
+
+    #uploadForm button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="https://files.catbox.moe/aljneo.jpg" alt="QRIS" class="qris-img" />
+  <h1>TEKAN QRIS UNTUK DOWNLOAD</h1>
+
+  <div class="buttons-container">
+    <button class="copy-button" data-copy="081234567890">
+      <div class="text-group">
+        <span class="label">DANA</span>
+        <span class="value">08895485706</span>
+      </div>
+      <svg class="copy-icon" viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+    </button>
+
+    <button class="copy-button" data-copy="081122334455">
+      <div class="text-group">
+        <span class="label">GOPAY</span>
+        <span class="value">Mohon Maaf Belum Tersedia</span>
+      </div>
+      <svg class="copy-icon" viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+    </button>
+
+    <button class="copy-button" data-copy="1234567890">
+      <div class="text-group">
+        <span class="label">BCA</span>
+        <span class="value">Mohon Maaf Belum Tersedia</span>
+      </div>
+      <svg class="copy-icon" viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+    </button>
+  </div>
+
+ 
+  
+  <section id="uploadSection">
+    <h2>Unggah Bukti Transfer</h2>
+    <form id="uploadForm" enctype="multipart/form-data">
+      <input type="file" id="buktiTransfer" name="buktiTransfer" accept="image/*" required />
+      <button type="submit">Kirim Bukti</button>
+    </form>
+  </section>
+  
+</nav-->
+
+  <script>
+    // Tombol copy nomor
+    document.querySelectorAll('.copy-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const textToCopy = button.getAttribute('data-copy');
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          button.classList.add('copied');
+          const originalHTML = button.innerHTML;
+          button.innerHTML = '<div style="flex-grow:1; font-weight:bold; font-size:16px;">Disalin!</div>';
+          setTimeout(() => {
+            button.innerHTML = originalHTML;
+            button.classList.remove('copied');
+            // reattach event after innerHTML reset
+            button.addEventListener('click', arguments.callee);
+          }, 1500);
+        });
+      });
+    });
+    
+
+    document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const fileInput = document.getElementById('buktiTransfer');
+      if (!fileInput.files.length) {
+        alert('Pilih file dulu ya');
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append('buktiTransfer', fileInput.files[0]);
+
+      try {
+        const response = await fetch('upload.php', {
+          method: 'POST',
+          body: formData
+        });
+
+        if (!response.ok) throw new Error('Upload gagal');
+
+        const data = await response.json();
+
+        if (data.error) {
+          alert('Error: ' + data.error);
+          return;
+        }
+
+        const photoURL = data.url;
+        const waNumber = '628895485706'; // ganti  nomor WhatsApp mu
+        const message = encodeURIComponent(`Bukti transfer saya: ${photoURL}`);
+
+        window.location.href = `https://wa.me/${waNumber}?text=${message}`;
+
+      } catch (error) {
+        alert('Gagal upload, coba lagi nanti');
+        console.error(error);
+      }
+    }); 
+    
+  </script>
+</body>
+</html>
+
+  <h1>JIKA TIDAK BISA DI UPLOAD PM PRIBADI AJA YA</h1>
